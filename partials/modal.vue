@@ -81,6 +81,7 @@ export default {
 .modal img {
   max-height: 90%;
   width: 100%;
+  object-fit: cover;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }

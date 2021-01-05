@@ -33,7 +33,7 @@ export default {
     return {
       searchQuery: '',
       isShow: false,
-      defaultQuery: 'africa',
+      defaultQuery: 'african',
       imageData: {},
     }
   },
@@ -82,7 +82,7 @@ export default {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 90%;
   background: rgba(0, 0, 0, 0.5);
   /* z-index: -0; */
 }
@@ -99,8 +99,8 @@ export default {
 }
 
 #container {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -111,6 +111,7 @@ export default {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   #container {
     width: 970px;
@@ -122,7 +123,7 @@ export default {
   }
 }
 img {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: block;
   margin-bottom: 10px;
