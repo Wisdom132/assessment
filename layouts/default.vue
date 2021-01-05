@@ -5,6 +5,7 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -14,5 +15,6 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>
