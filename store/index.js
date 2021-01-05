@@ -9,7 +9,8 @@ const createStore = () => {
     return new Vuex.Store({
         state: () => ({
             images: [],
-            loading: false
+            loading: false,
+            searchValue: ''
         }),
 
         mutations: {
@@ -18,17 +19,26 @@ const createStore = () => {
             },
             SET_LOADER(state, payload) {
                 state.loading = payload
+            },
+            SET_SEARCH_VALUE(state, payload) {
+                state.searchValue = payload
             }
         },
 
         actions: {
             async getImageResult({ commit }, query) {
-                commit("SET_LOADER", true)
+                commit("SET_LOADER", true);
+                if (query != 'Smiling') {
+                    //check if query value has changed
+                    commit('SET_SEARCH_VALUE', query)
+                }
                 try {
                     let response = await new httpService(this.$axios).photos(query);
                     console.log(response);
+
                     commit('SET_IMAGES', response.data.results)
                     commit("SET_LOADER", false)
+
                 } catch (err) {
                     console.log(err);
                     commit("SET_LOADER", false)

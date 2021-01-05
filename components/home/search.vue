@@ -1,6 +1,6 @@
 <template>
   <div class="search-wrapper">
-    <div class="search-input-wrapper">
+    <div class="search-input-wrapper" v-if="!loading && searchValue == ''">
       <i class="fa fa-search icon"> </i>
       <input
         type="text"
@@ -9,6 +9,18 @@
         placeholder="Search for photos"
         v-on:keyup.enter="getPhotos"
       />
+    </div>
+
+    <div v-if="loading">
+      <h4>
+        Searching for <span>{{ searchValue }}</span>
+      </h4>
+    </div>
+
+    <div v-if="!loading && searchValue !== ''">
+      <h4>
+        Search Result for <span>"{{ searchValue }}"</span>
+      </h4>
     </div>
   </div>
 </template>
@@ -27,10 +39,14 @@ export default {
   methods: {
     async getPhotos() {
       console.log(this.searchQuery)
-      this.loading = true
       await this.$store.dispatch('getImageResult', this.searchQuery)
-      this.loading = false
     },
+  },
+  computed: {
+    ...mapState(['searchValue', 'loading']),
+  },
+  mounted() {
+    console.log(this.searchValue)
   },
 }
 </script>

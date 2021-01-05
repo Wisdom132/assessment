@@ -25,19 +25,15 @@ export default {
   components: { Loader },
   data() {
     return {
-      //   loading: false,
       searchQuery: '',
       defaultQuery: 'Smiling',
     }
   },
   methods: {
     async getPhotos(data = this.defaultQuery) {
-      //   this.loading = true
       await this.$store.dispatch('getImageResult', data)
-      //   this.loading = false
     },
   },
-
   computed: {
     ...mapState(['images', 'loading']),
   },
