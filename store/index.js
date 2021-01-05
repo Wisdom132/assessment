@@ -28,7 +28,7 @@ const createStore = () => {
         actions: {
             async getImageResult({ commit }, query) {
                 commit("SET_LOADER", true);
-                if (query != 'Smiling') {
+                if (query != 'africa') {
                     //check if query value has changed
                     commit('SET_SEARCH_VALUE', query)
                 }

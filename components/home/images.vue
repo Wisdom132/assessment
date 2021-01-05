@@ -35,7 +35,7 @@ export default {
     return {
       searchQuery: '',
       isShow: false,
-      defaultQuery: 'Smiling',
+      defaultQuery: 'africa',
       imageData: {},
     }
   },
@@ -62,6 +62,8 @@ export default {
 }
 </script>
 
+
+
 <style scoped>
 .card-list {
   column-count: 3;
@@ -72,7 +74,7 @@ export default {
   /* display: flex; */
   position: relative;
 }
-/* .card:before {
+.img:before {
   content: '';
   position: absolute;
   top: 0;
@@ -80,8 +82,8 @@ export default {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: -0;
-} */
+  /* z-index: -0; */
+}
 .card-image {
   flex: 100%;
   margin-top: 0.5rem;
