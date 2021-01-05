@@ -7,17 +7,15 @@
       <Loader />
     </div>
     <div class="card-list" v-else>
-      <div class="card" v-for="(image, index) in images" :key="index">
-        <img
-          class="card-image"
-          @click="showModal(image)"
-          :src="image.urls.small"
-        />
-        <div class="text-block">
-          <h4>{{ image.user.first_name }}</h4>
-          <p>
-            {{ image.user.location ? image.user.location : ' No Location' }}
-          </p>
+      <div class="" v-for="(image, index) in images" :key="index">
+        <div class="card" @click="showModal(image)">
+          <img class="card-image" :src="image.urls.small" />
+          <div class="text-block">
+            <h4>{{ image.user.first_name }}</h4>
+            <p class="location">
+              {{ image.user.location ? image.user.location : ' No Location' }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +63,10 @@ export default {
 
 
 <style scoped>
+.location {
+  font-size: 12px;
+  font-weight: 500;
+}
 .card-list {
   column-count: 3;
 }
@@ -74,7 +76,7 @@ export default {
   /* display: flex; */
   position: relative;
 }
-.img:before {
+.card:before {
   content: '';
   position: absolute;
   top: 0;
