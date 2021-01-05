@@ -54,7 +54,8 @@ export default {
 <style scoped>
 .progress-wrapper {
   text-align: left;
-  padding-left: 10px;
+  width: 100%;
+  padding-left: 100px;
 }
 .search-wrapper {
   height: 250px;

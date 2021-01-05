@@ -84,7 +84,6 @@ export default {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* z-index: -0; */
 }
 .card-image {
   flex: 100%;
