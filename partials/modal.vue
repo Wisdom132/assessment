@@ -42,19 +42,17 @@ export default {
   font-weight: 100;
 }
 
-/* .close-button {
-  border: none;
-  display: inline-block;
-  padding: 8px 16px;
-  vertical-align: middle;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  background-color: inherit;
-  text-align: center;
-  cursor: pointer;
-  white-space: nowrap;
-} */
+@media only screen and (max-width: 800px) {
+  .topright {
+    right: 0;
+  }
+  .modal {
+    width: 90% !important;
+  }
+  .modal img {
+    width: 90%;
+  }
+}
 .name {
   margin-bottom: 5px;
   color: #283a5a;
@@ -91,9 +89,6 @@ export default {
   align-items: center;
   padding: 10px 50px;
 }
-.closed {
-  display: none;
-}
 
 .modal-overlay {
   position: fixed;
@@ -102,7 +97,6 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 50;
-
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -159,20 +153,4 @@ body {
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
-
-/* .modal .close-button {
-  position: absolute;
-
-  z-index: 1;
-
-  top: 10px;
-
-  right: 20px;
-
-  border: 0;
-  background: black;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-} */
 </style>

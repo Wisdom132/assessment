@@ -14,10 +14,11 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, {
-        href: 'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
+      {
         rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
       },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
 
@@ -38,6 +39,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/dotenv',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
