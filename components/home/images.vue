@@ -72,10 +72,22 @@ export default {
   /* display: flex; */
   position: relative;
 }
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  color: white;
+}
 .card-image {
   flex: 100%;
   margin-top: 0.5rem;
   border-radius: 7px;
+  background: red;
 }
 
 @media only screen and (max-width: 600px) {
@@ -121,5 +133,6 @@ img {
   color: white;
   display: block;
   padding-left: 20px;
+  z-index: 100;
 }
 </style>

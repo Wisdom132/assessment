@@ -7,6 +7,6 @@ export default class auth {
     }
 
     photos(query) {
-        return this.http.get(`/search/photos?query=${query}&per_page=20`)
+        return this.http.get(`/search/photos?query=${query}&per_page=7`)
     }
 }

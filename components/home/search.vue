@@ -11,15 +11,15 @@
       />
     </div>
 
-    <div v-if="loading">
+    <div class="progress-wrapper" v-if="loading">
       <h4>
-        Searching for <span>{{ searchValue }}</span>
+        Searching for <span>“{{ searchValue }}”</span>
       </h4>
     </div>
 
-    <div v-if="!loading && searchValue !== ''">
+    <div class="progress-wrapper" v-if="!loading && searchValue !== ''">
       <h4>
-        Search Result for <span>"{{ searchValue }}"</span>
+        Search Result for <span>“{{ searchValue }}”</span>
       </h4>
     </div>
   </div>
@@ -51,13 +51,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.progress-wrapper {
+  text-align: left;
+}
 .search-wrapper {
   height: 250px;
   background: #dde2e8;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+h4 {
+  font-size: 30px;
+  color: #2a3c5b;
+}
+h4 span {
+  color: #707f93;
 }
 .search-input-wrapper {
   width: 60%;
@@ -69,13 +79,13 @@ export default {
   outline: none;
 }
 .icon {
-  padding: 13px;
+  padding: 18px;
   color: #dde2e8;
   width: 70px;
   text-align: left;
 }
 .search-input {
-  height: 40px;
+  height: 50px;
   width: 100%;
   border: 0;
   padding-left: 50px;
