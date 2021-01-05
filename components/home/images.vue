@@ -86,7 +86,6 @@ export default {
   flex: 100%;
   margin-top: 0.5rem;
   border-radius: 7px;
-  background: red;
 }
 
 @media only screen and (max-width: 600px) {
@@ -132,6 +131,5 @@ img {
   color: white;
   display: block;
   padding-left: 20px;
-  z-index: 100;
 }
 </style>
