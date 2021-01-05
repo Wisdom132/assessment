@@ -3,7 +3,7 @@ export default function ({
 }) {
   $axios.onRequest(config => {
 
-    config.headers['Authorization'] = `Client-ID ${process.env.VUE_APP_CLIENT_ID}`
+    config.headers['Authorization'] = `Client-ID PJlle6Hv9nuMqDxmpieVj1eK8VLYYq6zkh6S00WmaHk`
 
   })
 
